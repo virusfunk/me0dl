@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'window'" level="0">
+<item name = "Date">Sun Feb 14 14:56:52 2021
+</item>
+<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Project">window_prj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu250-figd2104-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 4.279 ns, 0.62 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">11, 13, 55.000 ns, 65.000 ns, 4, 4, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_dense_large_1_fu_426">dense_large_1, 6, 7, 30.000 ns, 35.000 ns, 4, 4, loop rewind(delay=0 initiation interval(s))</column>
+<column name="grp_dense_large_fu_433">dense_large, 3, 4, 15.000 ns, 20.000 ns, 2, 2, loop rewind(delay=0 initiation interval(s))</column>
+<column name="call_ret_relu_fu_857">relu, 0, 0, 0 ns, 0 ns, 1, 1, function</column>
+<column name="call_ln0_Block_proc_fu_919">Block_proc, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln25_window_entry3_fu_927">window_entry3, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln35_window_entry222_fu_934">window_entry222, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
