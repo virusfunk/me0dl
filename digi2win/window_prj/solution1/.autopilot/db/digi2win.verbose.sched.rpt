@@ -1,0 +1,117 @@
+
+
+================================================================
+== Vivado HLS Report for 'digi2win'
+================================================================
+* Date:           Mon Feb 15 15:42:26 2021
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        window_prj
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 4.352 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max   | min | max |   Type   |
+    +---------+---------+-----------+----------+-----+-----+----------+
+    |        2|      903| 10.000 ns | 4.515 us |    3|  904| dataflow |
+    +---------+---------+-----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 2, States = { 1 2 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 3 [2/2] (0.00ns)   --->   "call fastcc void @digi2win_Block__proc([3 x i10]* %max_coor, i18432* %digi, i12* %layer_1_out_179_V, i12* %layer_1_out_178_V, i12* %layer_1_out_177_V, i12* %layer_1_out_176_V, i12* %layer_1_out_175_V, i12* %layer_1_out_174_V, i12* %layer_1_out_173_V, i12* %layer_1_out_172_V, i12* %layer_1_out_171_V, i12* %layer_1_out_170_V, i12* %layer_1_out_169_V, i12* %layer_1_out_168_V, i12* %layer_1_out_167_V, i12* %layer_1_out_166_V, i12* %layer_1_out_165_V, i12* %layer_1_out_164_V, i12* %layer_1_out_163_V, i12* %layer_1_out_162_V, i12* %layer_1_out_161_V, i12* %layer_1_out_160_V, i12* %layer_1_out_159_V, i12* %layer_1_out_158_V, i12* %layer_1_out_157_V, i12* %layer_1_out_156_V, i12* %layer_1_out_155_V, i12* %layer_1_out_154_V, i12* %layer_1_out_153_V, i12* %layer_1_out_152_V, i12* %layer_1_out_151_V, i12* %layer_1_out_150_V, i12* %layer_1_out_149_V, i12* %layer_1_out_148_V, i12* %layer_1_out_147_V, i12* %layer_1_out_146_V, i12* %layer_1_out_145_V, i12* %layer_1_out_144_V, i12* %layer_1_out_143_V, i12* %layer_1_out_142_V, i12* %layer_1_out_141_V, i12* %layer_1_out_140_V, i12* %layer_1_out_139_V, i12* %layer_1_out_138_V, i12* %layer_1_out_137_V, i12* %layer_1_out_136_V, i12* %layer_1_out_135_V, i12* %layer_1_out_134_V, i12* %layer_1_out_133_V, i12* %layer_1_out_132_V, i12* %layer_1_out_131_V, i12* %layer_1_out_130_V, i12* %layer_1_out_129_V, i12* %layer_1_out_128_V, i12* %layer_1_out_127_V, i12* %layer_1_out_126_V, i12* %layer_1_out_125_V, i12* %layer_1_out_124_V, i12* %layer_1_out_123_V, i12* %layer_1_out_122_V, i12* %layer_1_out_121_V, i12* %layer_1_out_120_V, i12* %layer_1_out_119_V, i12* %layer_1_out_118_V, i12* %layer_1_out_117_V, i12* %layer_1_out_116_V, i12* %layer_1_out_115_V, i12* %layer_1_out_114_V, i12* %layer_1_out_113_V, i12* %layer_1_out_112_V, i12* %layer_1_out_111_V, i12* %layer_1_out_110_V, i12* %layer_1_out_109_V, i12* %layer_1_out_108_V, i12* %layer_1_out_107_V, i12* %layer_1_out_106_V, i12* %layer_1_out_105_V, i12* %layer_1_out_104_V, i12* %layer_1_out_103_V, i12* %layer_1_out_102_V, i12* %layer_1_out_101_V, i12* %layer_1_out_100_V, i12* %layer_1_out_99_V, i12* %layer_1_out_98_V, i12* %layer_1_out_97_V, i12* %layer_1_out_96_V, i12* %layer_1_out_95_V, i12* %layer_1_out_94_V, i12* %layer_1_out_93_V, i12* %layer_1_out_92_V, i12* %layer_1_out_91_V, i12* %layer_1_out_90_V, i12* %layer_1_out_89_V, i12* %layer_1_out_88_V, i12* %layer_1_out_87_V, i12* %layer_1_out_86_V, i12* %layer_1_out_85_V, i12* %layer_1_out_84_V, i12* %layer_1_out_83_V, i12* %layer_1_out_82_V, i12* %layer_1_out_81_V, i12* %layer_1_out_80_V, i12* %layer_1_out_79_V, i12* %layer_1_out_78_V, i12* %layer_1_out_77_V, i12* %layer_1_out_76_V, i12* %layer_1_out_75_V, i12* %layer_1_out_74_V, i12* %layer_1_out_73_V, i12* %layer_1_out_72_V, i12* %layer_1_out_71_V, i12* %layer_1_out_70_V, i12* %layer_1_out_69_V, i12* %layer_1_out_68_V, i12* %layer_1_out_67_V, i12* %layer_1_out_66_V, i12* %layer_1_out_65_V, i12* %layer_1_out_64_V, i12* %layer_1_out_63_V, i12* %layer_1_out_62_V, i12* %layer_1_out_61_V, i12* %layer_1_out_60_V, i12* %layer_1_out_59_V, i12* %layer_1_out_58_V, i12* %layer_1_out_57_V, i12* %layer_1_out_56_V, i12* %layer_1_out_55_V, i12* %layer_1_out_54_V, i12* %layer_1_out_53_V, i12* %layer_1_out_52_V, i12* %layer_1_out_51_V, i12* %layer_1_out_50_V, i12* %layer_1_out_49_V, i12* %layer_1_out_48_V, i12* %layer_1_out_47_V, i12* %layer_1_out_46_V, i12* %layer_1_out_45_V, i12* %layer_1_out_44_V, i12* %layer_1_out_43_V, i12* %layer_1_out_42_V, i12* %layer_1_out_41_V, i12* %layer_1_out_40_V, i12* %layer_1_out_39_V, i12* %layer_1_out_38_V, i12* %layer_1_out_37_V, i12* %layer_1_out_36_V, i12* %layer_1_out_35_V, i12* %layer_1_out_34_V, i12* %layer_1_out_33_V, i12* %layer_1_out_32_V, i12* %layer_1_out_31_V, i12* %layer_1_out_30_V, i12* %layer_1_out_29_V, i12* %layer_1_out_28_V, i12* %layer_1_out_27_V, i12* %layer_1_out_26_V, i12* %layer_1_out_25_V, i12* %layer_1_out_24_V, i12* %layer_1_out_23_V, i12* %layer_1_out_22_V, i12* %layer_1_out_21_V, i12* %layer_1_out_20_V, i12* %layer_1_out_19_V, i12* %layer_1_out_18_V, i12* %layer_1_out_17_V, i12* %layer_1_out_16_V, i12* %layer_1_out_15_V, i12* %layer_1_out_14_V, i12* %layer_1_out_13_V, i12* %layer_1_out_12_V, i12* %layer_1_out_11_V, i12* %layer_1_out_10_V, i12* %layer_1_out_9_V, i12* %layer_1_out_8_V, i12* %layer_1_out_7_V, i12* %layer_1_out_6_V, i12* %layer_1_out_5_V, i12* %layer_1_out_4_V, i12* %layer_1_out_3_V, i12* %layer_1_out_2_V, i12* %layer_1_out_1_V, i12* %layer_1_out_0_V)"   --->   Operation 3 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 1.90>
+ST_2 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18432* %digi, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 4 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, i32 0, [1 x i8]* @p_str5) nounwind" [firmware/nnet_utils/nnet_digi2win.h:57->firmware/nnet_utils/nnet_digi2win.h:22->firmware/window.cpp:61]   --->   Operation 5 'specdataflowpipeline' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 6 [1/2] (1.90ns)   --->   "call fastcc void @digi2win_Block__proc([3 x i10]* %max_coor, i18432* %digi, i12* %layer_1_out_179_V, i12* %layer_1_out_178_V, i12* %layer_1_out_177_V, i12* %layer_1_out_176_V, i12* %layer_1_out_175_V, i12* %layer_1_out_174_V, i12* %layer_1_out_173_V, i12* %layer_1_out_172_V, i12* %layer_1_out_171_V, i12* %layer_1_out_170_V, i12* %layer_1_out_169_V, i12* %layer_1_out_168_V, i12* %layer_1_out_167_V, i12* %layer_1_out_166_V, i12* %layer_1_out_165_V, i12* %layer_1_out_164_V, i12* %layer_1_out_163_V, i12* %layer_1_out_162_V, i12* %layer_1_out_161_V, i12* %layer_1_out_160_V, i12* %layer_1_out_159_V, i12* %layer_1_out_158_V, i12* %layer_1_out_157_V, i12* %layer_1_out_156_V, i12* %layer_1_out_155_V, i12* %layer_1_out_154_V, i12* %layer_1_out_153_V, i12* %layer_1_out_152_V, i12* %layer_1_out_151_V, i12* %layer_1_out_150_V, i12* %layer_1_out_149_V, i12* %layer_1_out_148_V, i12* %layer_1_out_147_V, i12* %layer_1_out_146_V, i12* %layer_1_out_145_V, i12* %layer_1_out_144_V, i12* %layer_1_out_143_V, i12* %layer_1_out_142_V, i12* %layer_1_out_141_V, i12* %layer_1_out_140_V, i12* %layer_1_out_139_V, i12* %layer_1_out_138_V, i12* %layer_1_out_137_V, i12* %layer_1_out_136_V, i12* %layer_1_out_135_V, i12* %layer_1_out_134_V, i12* %layer_1_out_133_V, i12* %layer_1_out_132_V, i12* %layer_1_out_131_V, i12* %layer_1_out_130_V, i12* %layer_1_out_129_V, i12* %layer_1_out_128_V, i12* %layer_1_out_127_V, i12* %layer_1_out_126_V, i12* %layer_1_out_125_V, i12* %layer_1_out_124_V, i12* %layer_1_out_123_V, i12* %layer_1_out_122_V, i12* %layer_1_out_121_V, i12* %layer_1_out_120_V, i12* %layer_1_out_119_V, i12* %layer_1_out_118_V, i12* %layer_1_out_117_V, i12* %layer_1_out_116_V, i12* %layer_1_out_115_V, i12* %layer_1_out_114_V, i12* %layer_1_out_113_V, i12* %layer_1_out_112_V, i12* %layer_1_out_111_V, i12* %layer_1_out_110_V, i12* %layer_1_out_109_V, i12* %layer_1_out_108_V, i12* %layer_1_out_107_V, i12* %layer_1_out_106_V, i12* %layer_1_out_105_V, i12* %layer_1_out_104_V, i12* %layer_1_out_103_V, i12* %layer_1_out_102_V, i12* %layer_1_out_101_V, i12* %layer_1_out_100_V, i12* %layer_1_out_99_V, i12* %layer_1_out_98_V, i12* %layer_1_out_97_V, i12* %layer_1_out_96_V, i12* %layer_1_out_95_V, i12* %layer_1_out_94_V, i12* %layer_1_out_93_V, i12* %layer_1_out_92_V, i12* %layer_1_out_91_V, i12* %layer_1_out_90_V, i12* %layer_1_out_89_V, i12* %layer_1_out_88_V, i12* %layer_1_out_87_V, i12* %layer_1_out_86_V, i12* %layer_1_out_85_V, i12* %layer_1_out_84_V, i12* %layer_1_out_83_V, i12* %layer_1_out_82_V, i12* %layer_1_out_81_V, i12* %layer_1_out_80_V, i12* %layer_1_out_79_V, i12* %layer_1_out_78_V, i12* %layer_1_out_77_V, i12* %layer_1_out_76_V, i12* %layer_1_out_75_V, i12* %layer_1_out_74_V, i12* %layer_1_out_73_V, i12* %layer_1_out_72_V, i12* %layer_1_out_71_V, i12* %layer_1_out_70_V, i12* %layer_1_out_69_V, i12* %layer_1_out_68_V, i12* %layer_1_out_67_V, i12* %layer_1_out_66_V, i12* %layer_1_out_65_V, i12* %layer_1_out_64_V, i12* %layer_1_out_63_V, i12* %layer_1_out_62_V, i12* %layer_1_out_61_V, i12* %layer_1_out_60_V, i12* %layer_1_out_59_V, i12* %layer_1_out_58_V, i12* %layer_1_out_57_V, i12* %layer_1_out_56_V, i12* %layer_1_out_55_V, i12* %layer_1_out_54_V, i12* %layer_1_out_53_V, i12* %layer_1_out_52_V, i12* %layer_1_out_51_V, i12* %layer_1_out_50_V, i12* %layer_1_out_49_V, i12* %layer_1_out_48_V, i12* %layer_1_out_47_V, i12* %layer_1_out_46_V, i12* %layer_1_out_45_V, i12* %layer_1_out_44_V, i12* %layer_1_out_43_V, i12* %layer_1_out_42_V, i12* %layer_1_out_41_V, i12* %layer_1_out_40_V, i12* %layer_1_out_39_V, i12* %layer_1_out_38_V, i12* %layer_1_out_37_V, i12* %layer_1_out_36_V, i12* %layer_1_out_35_V, i12* %layer_1_out_34_V, i12* %layer_1_out_33_V, i12* %layer_1_out_32_V, i12* %layer_1_out_31_V, i12* %layer_1_out_30_V, i12* %layer_1_out_29_V, i12* %layer_1_out_28_V, i12* %layer_1_out_27_V, i12* %layer_1_out_26_V, i12* %layer_1_out_25_V, i12* %layer_1_out_24_V, i12* %layer_1_out_23_V, i12* %layer_1_out_22_V, i12* %layer_1_out_21_V, i12* %layer_1_out_20_V, i12* %layer_1_out_19_V, i12* %layer_1_out_18_V, i12* %layer_1_out_17_V, i12* %layer_1_out_16_V, i12* %layer_1_out_15_V, i12* %layer_1_out_14_V, i12* %layer_1_out_13_V, i12* %layer_1_out_12_V, i12* %layer_1_out_11_V, i12* %layer_1_out_10_V, i12* %layer_1_out_9_V, i12* %layer_1_out_8_V, i12* %layer_1_out_7_V, i12* %layer_1_out_6_V, i12* %layer_1_out_5_V, i12* %layer_1_out_4_V, i12* %layer_1_out_3_V, i12* %layer_1_out_2_V, i12* %layer_1_out_1_V, i12* %layer_1_out_0_V)"   --->   Operation 6 'call' <Predicate = true> <Delay = 1.90> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "ret void" [firmware/nnet_utils/nnet_digi2win.h:22->firmware/window.cpp:61]   --->   Operation 7 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 1.9ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'digi2win_Block__proc' [185]  (1.9 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,314 @@
+
+
+================================================================
+== Vivado HLS Report for 'Loop_1_proc'
+================================================================
+* Date:           Tue Feb  9 15:25:07 2021
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        window_prj
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 1.724 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |        ?|        ?|         1|          -|          -|     ?|    no    |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%i_1 = alloca i32"   --->   Operation 3 'alloca' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%p_read_1 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read179)" [firmware/window.cpp:62]   --->   Operation 4 'read' 'p_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%p_read_2 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read178)" [firmware/window.cpp:62]   --->   Operation 5 'read' 'p_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%p_read_3 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read177)" [firmware/window.cpp:62]   --->   Operation 6 'read' 'p_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_read_4 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read176)" [firmware/window.cpp:62]   --->   Operation 7 'read' 'p_read_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_read_5 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read175)" [firmware/window.cpp:62]   --->   Operation 8 'read' 'p_read_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_read_6 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read174)" [firmware/window.cpp:62]   --->   Operation 9 'read' 'p_read_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%p_read_7 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read173)" [firmware/window.cpp:62]   --->   Operation 10 'read' 'p_read_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%p_read_8 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read172)" [firmware/window.cpp:62]   --->   Operation 11 'read' 'p_read_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%p_read_9 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read171)" [firmware/window.cpp:62]   --->   Operation 12 'read' 'p_read_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%p_read_10 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read170)" [firmware/window.cpp:62]   --->   Operation 13 'read' 'p_read_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%p_read_11 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read169)" [firmware/window.cpp:62]   --->   Operation 14 'read' 'p_read_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%p_read_12 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read168)" [firmware/window.cpp:62]   --->   Operation 15 'read' 'p_read_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%p_read_13 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read167)" [firmware/window.cpp:62]   --->   Operation 16 'read' 'p_read_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%p_read_14 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read166)" [firmware/window.cpp:62]   --->   Operation 17 'read' 'p_read_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%p_read_15 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read165)" [firmware/window.cpp:62]   --->   Operation 18 'read' 'p_read_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%p_read_16 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read164)" [firmware/window.cpp:62]   --->   Operation 19 'read' 'p_read_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%p_read_17 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read163)" [firmware/window.cpp:62]   --->   Operation 20 'read' 'p_read_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%p_read_18 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read162)" [firmware/window.cpp:62]   --->   Operation 21 'read' 'p_read_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%p_read_19 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read161)" [firmware/window.cpp:62]   --->   Operation 22 'read' 'p_read_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%p_read_20 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read160)" [firmware/window.cpp:62]   --->   Operation 23 'read' 'p_read_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%p_read_21 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read159)" [firmware/window.cpp:62]   --->   Operation 24 'read' 'p_read_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_read_22 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read158)" [firmware/window.cpp:62]   --->   Operation 25 'read' 'p_read_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%p_read_23 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read157)" [firmware/window.cpp:62]   --->   Operation 26 'read' 'p_read_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%p_read_24 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read156)" [firmware/window.cpp:62]   --->   Operation 27 'read' 'p_read_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%p_read_25 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read155)" [firmware/window.cpp:62]   --->   Operation 28 'read' 'p_read_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%p_read_26 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read154)" [firmware/window.cpp:62]   --->   Operation 29 'read' 'p_read_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%p_read_27 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read153)" [firmware/window.cpp:62]   --->   Operation 30 'read' 'p_read_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%p_read_28 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read152)" [firmware/window.cpp:62]   --->   Operation 31 'read' 'p_read_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%p_read_29 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read151)" [firmware/window.cpp:62]   --->   Operation 32 'read' 'p_read_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%p_read_30 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read150)" [firmware/window.cpp:62]   --->   Operation 33 'read' 'p_read_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%p_read_31 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read149)" [firmware/window.cpp:62]   --->   Operation 34 'read' 'p_read_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%p_read_32 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read148)" [firmware/window.cpp:62]   --->   Operation 35 'read' 'p_read_32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%p_read_33 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read147)" [firmware/window.cpp:62]   --->   Operation 36 'read' 'p_read_33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%p_read_34 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read146)" [firmware/window.cpp:62]   --->   Operation 37 'read' 'p_read_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%p_read_35 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read145)" [firmware/window.cpp:62]   --->   Operation 38 'read' 'p_read_35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%p_read_36 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read144)" [firmware/window.cpp:62]   --->   Operation 39 'read' 'p_read_36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%p_read_37 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read143)" [firmware/window.cpp:62]   --->   Operation 40 'read' 'p_read_37' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%p_read_38 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read142)" [firmware/window.cpp:62]   --->   Operation 41 'read' 'p_read_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%p_read_39 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read141)" [firmware/window.cpp:62]   --->   Operation 42 'read' 'p_read_39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%p_read_40 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read140)" [firmware/window.cpp:62]   --->   Operation 43 'read' 'p_read_40' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%p_read_41 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read139)" [firmware/window.cpp:62]   --->   Operation 44 'read' 'p_read_41' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%p_read_42 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read138)" [firmware/window.cpp:62]   --->   Operation 45 'read' 'p_read_42' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%p_read_43 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read137)" [firmware/window.cpp:62]   --->   Operation 46 'read' 'p_read_43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%p_read_44 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read136)" [firmware/window.cpp:62]   --->   Operation 47 'read' 'p_read_44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%p_read_45 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read135)" [firmware/window.cpp:62]   --->   Operation 48 'read' 'p_read_45' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%p_read_46 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read134)" [firmware/window.cpp:62]   --->   Operation 49 'read' 'p_read_46' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%p_read_47 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read133)" [firmware/window.cpp:62]   --->   Operation 50 'read' 'p_read_47' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%p_read_48 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read132)" [firmware/window.cpp:62]   --->   Operation 51 'read' 'p_read_48' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%p_read_49 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read131)" [firmware/window.cpp:62]   --->   Operation 52 'read' 'p_read_49' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%p_read_50 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read130)" [firmware/window.cpp:62]   --->   Operation 53 'read' 'p_read_50' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%p_read_51 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read129)" [firmware/window.cpp:62]   --->   Operation 54 'read' 'p_read_51' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%p_read_52 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read128)" [firmware/window.cpp:62]   --->   Operation 55 'read' 'p_read_52' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%p_read_53 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read127)" [firmware/window.cpp:62]   --->   Operation 56 'read' 'p_read_53' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%p_read_54 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read126)" [firmware/window.cpp:62]   --->   Operation 57 'read' 'p_read_54' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%p_read_55 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read125)" [firmware/window.cpp:62]   --->   Operation 58 'read' 'p_read_55' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%p_read_56 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read124)" [firmware/window.cpp:62]   --->   Operation 59 'read' 'p_read_56' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%p_read_57 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read123)" [firmware/window.cpp:62]   --->   Operation 60 'read' 'p_read_57' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%p_read_58 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read122)" [firmware/window.cpp:62]   --->   Operation 61 'read' 'p_read_58' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%p_read_59 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read121)" [firmware/window.cpp:62]   --->   Operation 62 'read' 'p_read_59' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%p_read_60 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read120)" [firmware/window.cpp:62]   --->   Operation 63 'read' 'p_read_60' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%p_read_61 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read119)" [firmware/window.cpp:62]   --->   Operation 64 'read' 'p_read_61' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%p_read_62 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read118)" [firmware/window.cpp:62]   --->   Operation 65 'read' 'p_read_62' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%p_read_63 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read117)" [firmware/window.cpp:62]   --->   Operation 66 'read' 'p_read_63' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%p_read_64 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read116)" [firmware/window.cpp:62]   --->   Operation 67 'read' 'p_read_64' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%p_read_65 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read115)" [firmware/window.cpp:62]   --->   Operation 68 'read' 'p_read_65' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%p_read_66 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read114)" [firmware/window.cpp:62]   --->   Operation 69 'read' 'p_read_66' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%p_read_67 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read113)" [firmware/window.cpp:62]   --->   Operation 70 'read' 'p_read_67' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%p_read_68 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read112)" [firmware/window.cpp:62]   --->   Operation 71 'read' 'p_read_68' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%p_read_69 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read111)" [firmware/window.cpp:62]   --->   Operation 72 'read' 'p_read_69' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%p_read_70 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read110)" [firmware/window.cpp:62]   --->   Operation 73 'read' 'p_read_70' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%p_read_71 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read109)" [firmware/window.cpp:62]   --->   Operation 74 'read' 'p_read_71' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%p_read_72 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read108)" [firmware/window.cpp:62]   --->   Operation 75 'read' 'p_read_72' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%p_read_73 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read107)" [firmware/window.cpp:62]   --->   Operation 76 'read' 'p_read_73' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%p_read_74 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read106)" [firmware/window.cpp:62]   --->   Operation 77 'read' 'p_read_74' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%p_read_75 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read105)" [firmware/window.cpp:62]   --->   Operation 78 'read' 'p_read_75' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%p_read_76 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read104)" [firmware/window.cpp:62]   --->   Operation 79 'read' 'p_read_76' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%p_read_77 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read103)" [firmware/window.cpp:62]   --->   Operation 80 'read' 'p_read_77' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%p_read_78 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read102)" [firmware/window.cpp:62]   --->   Operation 81 'read' 'p_read_78' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%p_read_79 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read101)" [firmware/window.cpp:62]   --->   Operation 82 'read' 'p_read_79' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%p_read_80 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read100)" [firmware/window.cpp:62]   --->   Operation 83 'read' 'p_read_80' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%p_read_81 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read99)" [firmware/window.cpp:62]   --->   Operation 84 'read' 'p_read_81' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%p_read_82 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read98)" [firmware/window.cpp:62]   --->   Operation 85 'read' 'p_read_82' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%p_read_83 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read97)" [firmware/window.cpp:62]   --->   Operation 86 'read' 'p_read_83' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%p_read_84 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read96)" [firmware/window.cpp:62]   --->   Operation 87 'read' 'p_read_84' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%p_read_85 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read95)" [firmware/window.cpp:62]   --->   Operation 88 'read' 'p_read_85' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%p_read_86 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read94)" [firmware/window.cpp:62]   --->   Operation 89 'read' 'p_read_86' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%p_read_87 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read93)" [firmware/window.cpp:62]   --->   Operation 90 'read' 'p_read_87' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%p_read_88 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read92)" [firmware/window.cpp:62]   --->   Operation 91 'read' 'p_read_88' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%p_read_89 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read91)" [firmware/window.cpp:62]   --->   Operation 92 'read' 'p_read_89' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%p_read_90 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read90)" [firmware/window.cpp:62]   --->   Operation 93 'read' 'p_read_90' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%p_read_91 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read89)" [firmware/window.cpp:62]   --->   Operation 94 'read' 'p_read_91' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%p_read_92 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read88)" [firmware/window.cpp:62]   --->   Operation 95 'read' 'p_read_92' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%p_read_93 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read87)" [firmware/window.cpp:62]   --->   Operation 96 'read' 'p_read_93' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%p_read_94 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read86)" [firmware/window.cpp:62]   --->   Operation 97 'read' 'p_read_94' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%p_read_95 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read85)" [firmware/window.cpp:62]   --->   Operation 98 'read' 'p_read_95' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%p_read_96 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read84)" [firmware/window.cpp:62]   --->   Operation 99 'read' 'p_read_96' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%p_read_97 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read83)" [firmware/window.cpp:62]   --->   Operation 100 'read' 'p_read_97' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%p_read_98 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read82)" [firmware/window.cpp:62]   --->   Operation 101 'read' 'p_read_98' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%p_read_99 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read81)" [firmware/window.cpp:62]   --->   Operation 102 'read' 'p_read_99' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%p_read_100 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read80)" [firmware/window.cpp:62]   --->   Operation 103 'read' 'p_read_100' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%p_read_101 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read79)" [firmware/window.cpp:62]   --->   Operation 104 'read' 'p_read_101' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%p_read_102 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read78)" [firmware/window.cpp:62]   --->   Operation 105 'read' 'p_read_102' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%p_read_103 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read77)" [firmware/window.cpp:62]   --->   Operation 106 'read' 'p_read_103' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%p_read_104 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read76)" [firmware/window.cpp:62]   --->   Operation 107 'read' 'p_read_104' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%p_read_105 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read75)" [firmware/window.cpp:62]   --->   Operation 108 'read' 'p_read_105' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%p_read_106 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read74)" [firmware/window.cpp:62]   --->   Operation 109 'read' 'p_read_106' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%p_read_107 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read73)" [firmware/window.cpp:62]   --->   Operation 110 'read' 'p_read_107' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%p_read_108 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read72)" [firmware/window.cpp:62]   --->   Operation 111 'read' 'p_read_108' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%p_read_109 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read71)" [firmware/window.cpp:62]   --->   Operation 112 'read' 'p_read_109' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%p_read_110 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read70)" [firmware/window.cpp:62]   --->   Operation 113 'read' 'p_read_110' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%p_read_111 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read69)" [firmware/window.cpp:62]   --->   Operation 114 'read' 'p_read_111' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%p_read_112 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read68)" [firmware/window.cpp:62]   --->   Operation 115 'read' 'p_read_112' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%p_read_113 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read67)" [firmware/window.cpp:62]   --->   Operation 116 'read' 'p_read_113' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%p_read_114 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read66)" [firmware/window.cpp:62]   --->   Operation 117 'read' 'p_read_114' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%p_read_115 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read65)" [firmware/window.cpp:62]   --->   Operation 118 'read' 'p_read_115' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%p_read_116 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read64)" [firmware/window.cpp:62]   --->   Operation 119 'read' 'p_read_116' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%p_read_117 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read63)" [firmware/window.cpp:62]   --->   Operation 120 'read' 'p_read_117' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%p_read_118 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read62)" [firmware/window.cpp:62]   --->   Operation 121 'read' 'p_read_118' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%p_read_119 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read61)" [firmware/window.cpp:62]   --->   Operation 122 'read' 'p_read_119' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%p_read_120 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read60)" [firmware/window.cpp:62]   --->   Operation 123 'read' 'p_read_120' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%p_read_121 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read59)" [firmware/window.cpp:62]   --->   Operation 124 'read' 'p_read_121' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%p_read_122 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read58)" [firmware/window.cpp:62]   --->   Operation 125 'read' 'p_read_122' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%p_read_123 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read57)" [firmware/window.cpp:62]   --->   Operation 126 'read' 'p_read_123' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%p_read_124 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read56)" [firmware/window.cpp:62]   --->   Operation 127 'read' 'p_read_124' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%p_read_125 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read55)" [firmware/window.cpp:62]   --->   Operation 128 'read' 'p_read_125' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%p_read_126 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read54)" [firmware/window.cpp:62]   --->   Operation 129 'read' 'p_read_126' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%p_read_127 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read53)" [firmware/window.cpp:62]   --->   Operation 130 'read' 'p_read_127' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%p_read_128 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read52)" [firmware/window.cpp:62]   --->   Operation 131 'read' 'p_read_128' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%p_read_129 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read51)" [firmware/window.cpp:62]   --->   Operation 132 'read' 'p_read_129' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%p_read_130 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read50)" [firmware/window.cpp:62]   --->   Operation 133 'read' 'p_read_130' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%p_read_131 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read49)" [firmware/window.cpp:62]   --->   Operation 134 'read' 'p_read_131' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%p_read_132 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read48)" [firmware/window.cpp:62]   --->   Operation 135 'read' 'p_read_132' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 136 [1/1] (0.00ns)   --->   "%p_read_133 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read47)" [firmware/window.cpp:62]   --->   Operation 136 'read' 'p_read_133' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%p_read_134 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read46)" [firmware/window.cpp:62]   --->   Operation 137 'read' 'p_read_134' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%p_read_135 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read45)" [firmware/window.cpp:62]   --->   Operation 138 'read' 'p_read_135' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 139 [1/1] (0.00ns)   --->   "%p_read_136 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read44)" [firmware/window.cpp:62]   --->   Operation 139 'read' 'p_read_136' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "%p_read_137 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read43)" [firmware/window.cpp:62]   --->   Operation 140 'read' 'p_read_137' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%p_read_138 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read42)" [firmware/window.cpp:62]   --->   Operation 141 'read' 'p_read_138' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "%p_read_139 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read41)" [firmware/window.cpp:62]   --->   Operation 142 'read' 'p_read_139' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "%p_read_140 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read40)" [firmware/window.cpp:62]   --->   Operation 143 'read' 'p_read_140' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 144 [1/1] (0.00ns)   --->   "%p_read_141 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read39)" [firmware/window.cpp:62]   --->   Operation 144 'read' 'p_read_141' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 145 [1/1] (0.00ns)   --->   "%p_read_142 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read38)" [firmware/window.cpp:62]   --->   Operation 145 'read' 'p_read_142' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 146 [1/1] (0.00ns)   --->   "%p_read_143 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read37)" [firmware/window.cpp:62]   --->   Operation 146 'read' 'p_read_143' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 147 [1/1] (0.00ns)   --->   "%p_read_144 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read36)" [firmware/window.cpp:62]   --->   Operation 147 'read' 'p_read_144' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 148 [1/1] (0.00ns)   --->   "%p_read_145 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read35)" [firmware/window.cpp:62]   --->   Operation 148 'read' 'p_read_145' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 149 [1/1] (0.00ns)   --->   "%p_read_146 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read34)" [firmware/window.cpp:62]   --->   Operation 149 'read' 'p_read_146' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 150 [1/1] (0.00ns)   --->   "%p_read_147 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read33)" [firmware/window.cpp:62]   --->   Operation 150 'read' 'p_read_147' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "%p_read_148 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read32)" [firmware/window.cpp:62]   --->   Operation 151 'read' 'p_read_148' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 152 [1/1] (0.00ns)   --->   "%p_read_149 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read31)" [firmware/window.cpp:62]   --->   Operation 152 'read' 'p_read_149' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%p_read_150 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read30)" [firmware/window.cpp:62]   --->   Operation 153 'read' 'p_read_150' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%p_read_151 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read29)" [firmware/window.cpp:62]   --->   Operation 154 'read' 'p_read_151' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 155 [1/1] (0.00ns)   --->   "%p_read_152 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read28)" [firmware/window.cpp:62]   --->   Operation 155 'read' 'p_read_152' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "%p_read_153 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read27)" [firmware/window.cpp:62]   --->   Operation 156 'read' 'p_read_153' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 157 [1/1] (0.00ns)   --->   "%p_read_154 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read26)" [firmware/window.cpp:62]   --->   Operation 157 'read' 'p_read_154' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 158 [1/1] (0.00ns)   --->   "%p_read_155 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read25)" [firmware/window.cpp:62]   --->   Operation 158 'read' 'p_read_155' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 159 [1/1] (0.00ns)   --->   "%p_read_156 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read24)" [firmware/window.cpp:62]   --->   Operation 159 'read' 'p_read_156' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 160 [1/1] (0.00ns)   --->   "%p_read_157 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read23)" [firmware/window.cpp:62]   --->   Operation 160 'read' 'p_read_157' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 161 [1/1] (0.00ns)   --->   "%p_read_158 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read22)" [firmware/window.cpp:62]   --->   Operation 161 'read' 'p_read_158' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 162 [1/1] (0.00ns)   --->   "%p_read_159 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read21)" [firmware/window.cpp:62]   --->   Operation 162 'read' 'p_read_159' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 163 [1/1] (0.00ns)   --->   "%p_read_160 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read20)" [firmware/window.cpp:62]   --->   Operation 163 'read' 'p_read_160' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 164 [1/1] (0.00ns)   --->   "%p_read_161 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read19)" [firmware/window.cpp:62]   --->   Operation 164 'read' 'p_read_161' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 165 [1/1] (0.00ns)   --->   "%p_read_162 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read18)" [firmware/window.cpp:62]   --->   Operation 165 'read' 'p_read_162' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 166 [1/1] (0.00ns)   --->   "%p_read_163 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read17)" [firmware/window.cpp:62]   --->   Operation 166 'read' 'p_read_163' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 167 [1/1] (0.00ns)   --->   "%p_read_164 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read16)" [firmware/window.cpp:62]   --->   Operation 167 'read' 'p_read_164' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 168 [1/1] (0.00ns)   --->   "%p_read_165 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read15)" [firmware/window.cpp:62]   --->   Operation 168 'read' 'p_read_165' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 169 [1/1] (0.00ns)   --->   "%p_read_166 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read14)" [firmware/window.cpp:62]   --->   Operation 169 'read' 'p_read_166' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 170 [1/1] (0.00ns)   --->   "%p_read_167 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read13)" [firmware/window.cpp:62]   --->   Operation 170 'read' 'p_read_167' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 171 [1/1] (0.00ns)   --->   "%p_read_168 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read12)" [firmware/window.cpp:62]   --->   Operation 171 'read' 'p_read_168' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 172 [1/1] (0.00ns)   --->   "%p_read_169 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read11)" [firmware/window.cpp:62]   --->   Operation 172 'read' 'p_read_169' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 173 [1/1] (0.00ns)   --->   "%p_read_170 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read10)" [firmware/window.cpp:62]   --->   Operation 173 'read' 'p_read_170' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 174 [1/1] (0.00ns)   --->   "%p_read_171 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read9)" [firmware/window.cpp:62]   --->   Operation 174 'read' 'p_read_171' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 175 [1/1] (0.00ns)   --->   "%p_read_172 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read8)" [firmware/window.cpp:62]   --->   Operation 175 'read' 'p_read_172' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 176 [1/1] (0.00ns)   --->   "%p_read_173 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read7)" [firmware/window.cpp:62]   --->   Operation 176 'read' 'p_read_173' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 177 [1/1] (0.00ns)   --->   "%p_read_174 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read6)" [firmware/window.cpp:62]   --->   Operation 177 'read' 'p_read_174' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 178 [1/1] (0.00ns)   --->   "%p_read_175 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read5)" [firmware/window.cpp:62]   --->   Operation 178 'read' 'p_read_175' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 179 [1/1] (0.00ns)   --->   "%p_read_176 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read4)" [firmware/window.cpp:62]   --->   Operation 179 'read' 'p_read_176' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 180 [1/1] (0.00ns)   --->   "%p_read_177 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read3)" [firmware/window.cpp:62]   --->   Operation 180 'read' 'p_read_177' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 181 [1/1] (0.00ns)   --->   "%p_read_178 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read2)" [firmware/window.cpp:62]   --->   Operation 181 'read' 'p_read_178' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 182 [1/1] (0.00ns)   --->   "%p_read_179 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read1)" [firmware/window.cpp:62]   --->   Operation 182 'read' 'p_read_179' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 183 [1/1] (0.00ns)   --->   "%p_read180 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read)" [firmware/window.cpp:62]   --->   Operation 183 'read' 'p_read180' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 184 [1/1] (0.00ns)   --->   "br label %.preheader" [firmware/window.cpp:63]   --->   Operation 184 'br' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.72>
+ST_2 : Operation 185 [1/1] (0.00ns)   --->   "%i_1_load = load i32* %i_1" [firmware/window.cpp:63]   --->   Operation 185 'load' 'i_1_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 186 [1/1] (0.85ns)   --->   "%icmp_ln63 = icmp slt i32 %i_1_load, 180" [firmware/window.cpp:63]   --->   Operation 186 'icmp' 'icmp_ln63' <Predicate = true> <Delay = 0.85> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 187 [1/1] (0.00ns)   --->   "br i1 %icmp_ln63, label %_ZN8ap_fixedILi12ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Eb.exit, label %arrayctor.loop1.preheader.exitStub" [firmware/window.cpp:63]   --->   Operation 187 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 188 [1/1] (0.00ns)   --->   "%i_1_load_1 = load i32* %i_1" [firmware/window.cpp:63]   --->   Operation 188 'load' 'i_1_load_1' <Predicate = (icmp_ln63)> <Delay = 0.00>
+ST_2 : Operation 189 [1/1] (0.00ns)   --->   "%trunc_ln64 = trunc i32 %i_1_load_1 to i8" [firmware/window.cpp:64]   --->   Operation 189 'trunc' 'trunc_ln64' <Predicate = (icmp_ln63)> <Delay = 0.00>
+ST_2 : Operation 190 [1/1] (1.05ns)   --->   "%signbit = call i1 @_ssdm_op_Mux.ap_auto.180i1.i8(i1 %p_read180, i1 %p_read_179, i1 %p_read_178, i1 %p_read_177, i1 %p_read_176, i1 %p_read_175, i1 %p_read_174, i1 %p_read_173, i1 %p_read_172, i1 %p_read_171, i1 %p_read_170, i1 %p_read_169, i1 %p_read_168, i1 %p_read_167, i1 %p_read_166, i1 %p_read_165, i1 %p_read_164, i1 %p_read_163, i1 %p_read_162, i1 %p_read_161, i1 %p_read_160, i1 %p_read_159, i1 %p_read_158, i1 %p_read_157, i1 %p_read_156, i1 %p_read_155, i1 %p_read_154, i1 %p_read_153, i1 %p_read_152, i1 %p_read_151, i1 %p_read_150, i1 %p_read_149, i1 %p_read_148, i1 %p_read_147, i1 %p_read_146, i1 %p_read_145, i1 %p_read_144, i1 %p_read_143, i1 %p_read_142, i1 %p_read_141, i1 %p_read_140, i1 %p_read_139, i1 %p_read_138, i1 %p_read_137, i1 %p_read_136, i1 %p_read_135, i1 %p_read_134, i1 %p_read_133, i1 %p_read_132, i1 %p_read_131, i1 %p_read_130, i1 %p_read_129, i1 %p_read_128, i1 %p_read_127, i1 %p_read_126, i1 %p_read_125, i1 %p_read_124, i1 %p_read_123, i1 %p_read_122, i1 %p_read_121, i1 %p_read_120, i1 %p_read_119, i1 %p_read_118, i1 %p_read_117, i1 %p_read_116, i1 %p_read_115, i1 %p_read_114, i1 %p_read_113, i1 %p_read_112, i1 %p_read_111, i1 %p_read_110, i1 %p_read_109, i1 %p_read_108, i1 %p_read_107, i1 %p_read_106, i1 %p_read_105, i1 %p_read_104, i1 %p_read_103, i1 %p_read_102, i1 %p_read_101, i1 %p_read_100, i1 %p_read_99, i1 %p_read_98, i1 %p_read_97, i1 %p_read_96, i1 %p_read_95, i1 %p_read_94, i1 %p_read_93, i1 %p_read_92, i1 %p_read_91, i1 %p_read_90, i1 %p_read_89, i1 %p_read_88, i1 %p_read_87, i1 %p_read_86, i1 %p_read_85, i1 %p_read_84, i1 %p_read_83, i1 %p_read_82, i1 %p_read_81, i1 %p_read_80, i1 %p_read_79, i1 %p_read_78, i1 %p_read_77, i1 %p_read_76, i1 %p_read_75, i1 %p_read_74, i1 %p_read_73, i1 %p_read_72, i1 %p_read_71, i1 %p_read_70, i1 %p_read_69, i1 %p_read_68, i1 %p_read_67, i1 %p_read_66, i1 %p_read_65, i1 %p_read_64, i1 %p_read_63, i1 %p_read_62, i1 %p_read_61, i1 %p_read_60, i1 %p_read_59, i1 %p_read_58, i1 %p_read_57, i1 %p_read_56, i1 %p_read_55, i1 %p_read_54, i1 %p_read_53, i1 %p_read_52, i1 %p_read_51, i1 %p_read_50, i1 %p_read_49, i1 %p_read_48, i1 %p_read_47, i1 %p_read_46, i1 %p_read_45, i1 %p_read_44, i1 %p_read_43, i1 %p_read_42, i1 %p_read_41, i1 %p_read_40, i1 %p_read_39, i1 %p_read_38, i1 %p_read_37, i1 %p_read_36, i1 %p_read_35, i1 %p_read_34, i1 %p_read_33, i1 %p_read_32, i1 %p_read_31, i1 %p_read_30, i1 %p_read_29, i1 %p_read_28, i1 %p_read_27, i1 %p_read_26, i1 %p_read_25, i1 %p_read_24, i1 %p_read_23, i1 %p_read_22, i1 %p_read_21, i1 %p_read_20, i1 %p_read_19, i1 %p_read_18, i1 %p_read_17, i1 %p_read_16, i1 %p_read_15, i1 %p_read_14, i1 %p_read_13, i1 %p_read_12, i1 %p_read_11, i1 %p_read_10, i1 %p_read_9, i1 %p_read_8, i1 %p_read_7, i1 %p_read_6, i1 %p_read_5, i1 %p_read_4, i1 %p_read_3, i1 %p_read_2, i1 %p_read_1, i8 %trunc_ln64)" [firmware/window.cpp:64]   --->   Operation 190 'mux' 'signbit' <Predicate = (icmp_ln63)> <Delay = 1.05> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 191 [1/1] (0.00ns)   --->   "%shl_ln = call i5 @_ssdm_op_BitConcatenate.i5.i1.i4(i1 %signbit, i4 0)" [firmware/window.cpp:64]   --->   Operation 191 'bitconcatenate' 'shl_ln' <Predicate = (icmp_ln63)> <Delay = 0.00>
+ST_2 : Operation 192 [1/1] (0.00ns)   --->   "%sext_ln64 = sext i32 %i_1_load_1 to i64" [firmware/window.cpp:64]   --->   Operation 192 'sext' 'sext_ln64' <Predicate = (icmp_ln63)> <Delay = 0.00>
+ST_2 : Operation 193 [1/1] (0.00ns)   --->   "%dense_1_input_V_addr = getelementptr [180 x i5]* %dense_1_input_V, i64 0, i64 %sext_ln64" [firmware/window.cpp:64]   --->   Operation 193 'getelementptr' 'dense_1_input_V_addr' <Predicate = (icmp_ln63)> <Delay = 0.00>
+ST_2 : Operation 194 [1/1] (0.66ns)   --->   "store i5 %shl_ln, i5* %dense_1_input_V_addr, align 1" [firmware/window.cpp:64]   --->   Operation 194 'store' <Predicate = (icmp_ln63)> <Delay = 0.66> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 180> <RAM>
+ST_2 : Operation 195 [1/1] (0.66ns)   --->   "%i = add nsw i32 1, %i_1_load_1" [firmware/window.cpp:63]   --->   Operation 195 'add' 'i' <Predicate = (icmp_ln63)> <Delay = 0.66> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 196 [1/1] (0.00ns)   --->   "store i32 %i, i32* %i_1" [firmware/window.cpp:63]   --->   Operation 196 'store' <Predicate = (icmp_ln63)> <Delay = 0.00>
+ST_2 : Operation 197 [1/1] (0.00ns)   --->   "br label %.preheader" [firmware/window.cpp:63]   --->   Operation 197 'br' <Predicate = (icmp_ln63)> <Delay = 0.00>
+ST_2 : Operation 198 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 198 'ret' <Predicate = (!icmp_ln63)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 1.72ns
+The critical path consists of the following:
+	'load' operation ('i_1_load_1', firmware/window.cpp:63) on local variable 'i' [369]  (0 ns)
+	'mux' operation ('v', firmware/window.cpp:64) [371]  (1.06 ns)
+	'store' operation ('store_ln64', firmware/window.cpp:64) of variable 'shl_ln', firmware/window.cpp:64 on array 'dense_1_input_V' [375]  (0.669 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
